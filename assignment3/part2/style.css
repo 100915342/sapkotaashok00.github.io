@@ -1,0 +1,10 @@
+html {
+  font-family: sans-serif;
+}
+
+/* Your CSS below here */
+div {
+  /* managing size AND THE position */
+  width: 200px;
+  margin: auto;
+  line-height: 9;
