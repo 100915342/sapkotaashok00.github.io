@@ -16,3 +16,6 @@ div {
   color: white;
   /* choosing a text colour with contrash! */
   text-shadow: 1px 1px 1px black;
+  /* managed the border*/
+  border-radius: 10px;
+  border: 1px solid #990000;
