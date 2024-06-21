@@ -8,3 +8,9 @@ div {
   width: 200px;
   margin: auto;
   line-height: 9;
+  /* text */
+  font-size: 1.1rem;
+  /* here the initial font-size is 16px so that the correct
+      size can be 1.1rem. */
+  text-align: center;
+  color: white;
