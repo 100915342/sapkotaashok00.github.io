@@ -8,8 +8,6 @@ body {
   max-width: 1400px;
 }
 
-/* Layout */
-
 section {
   float: left;
   width: 50%;
@@ -36,8 +34,6 @@ nav,
 footer {
   padding: 20px;
 }
-
-/* header and footer */
 
 header,
 footer {
