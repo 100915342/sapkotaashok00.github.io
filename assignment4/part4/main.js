@@ -6,8 +6,8 @@ let count = 0;
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-const width = (canvas.width = window.innerWidth);
-const height = (canvas.height = window.innerHeight);
+const width = canvas.width = window.innerWidth;
+const height = canvas.height = window.innerHeight;
 
 // function to generate random number
 
@@ -19,7 +19,7 @@ function random(min, max) {
 //Function
 
 function randomRGB() {
-  return 'rgb(${ random(0, 255) }, ${ random(0, 255) }, ${ random(0, 255) })';
+  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
 class Shape {
