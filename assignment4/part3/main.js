@@ -28,6 +28,7 @@ class Ball {
     this.color = color;
     this.size = size;
   }
+  // ball motion
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
