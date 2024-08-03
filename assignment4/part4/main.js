@@ -131,24 +131,40 @@ class EvilCircle extends Shape {
       this.y += this.size;
     }
   }
+  collisionDetect() {
+    for (const ball of balls) {
+      if (ball.exists) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
 
-  const balls = [];
-
-  while(balls.length < 25) {
-    const size = random(10, 20);
-    const ball = new Ball(
-      // ball position always drawn at least one ball width
-      // away from the edge of the canvas, to avoid drawing errors
-      random(0 + size, width - size),
-      random(0 + size, height - size),
-      random(-7, 7),
-      random(-7, 7),
-      randomRGB(),
-      size
-    );
-
-    balls.push(ball);
+        if (distance < this.size + ball.size) {
+          ball.exists = false;
+          count--;
+          para.textContent = 'Ball count: ' + count;
+        }
+      }
+    }
   }
+
+}
+const balls = [];
+
+while (balls.length < 25) {
+  const size = random(10, 20);
+  const ball = new Ball(
+    // ball position always drawn at least one ball width
+    // away from the edge of the canvas, to avoid drawing errors
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    randomRGB(),
+    size
+  );
+
+  balls.push(ball);
+}
 
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
