@@ -19,7 +19,7 @@ function random(min, max) {
 //Function
 
 function randomRGB() {
-  return rgb(${ random(0, 255) }, ${ random(0, 255) }, ${ random(0, 255) });
+  return 'rgb(${ random(0, 255) }, ${ random(0, 255) }, ${ random(0, 255) })';
 }
 
 class Shape {
