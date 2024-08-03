@@ -165,7 +165,8 @@ while (balls.length < 25) {
 
   balls.push(ball);
   count++;
-  para.textContent = 'Ball count:' + count;
+  para.textContent = 'Ball count: ' + count;
+
 }
 const evilBall = new EvilCircle(random(0, width), random(0, height));
 function loop() {
